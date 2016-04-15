@@ -41,15 +41,136 @@
 			<!-- Any section element inside of this container is displayed as a slide -->
 			<div class="slides">
 				<section>
-					<h1>Azure, IoT and some sensor magic</h1>
-					<h3>Global Azure Bootcamp 2016, Finland</h3>
+					<h3>Azure IoT and sensors</h3>
+					<h5>Global Azure Bootcamp 2016, Finland</h5>
 					<p>
-						<small>Created by <a href="http://juharyhanen.com">Juha Ryhänen</a> / <a href="http://twitter.com/ryhanenjuha">@ryhanenjuha</a></small>
+						<small><a href="http://juharyhanen.com">Juha Ryhänen</a> / <a href="http://twitter.com/ryhanenjuha">@ryhanenjuha</a></small>
 					</p>
 				</section>
-
+                <section>
+                    <div>
+                        <h3>Who am I?</h3>
+                        <div data-markdown class="fragment">
+                            CEO of Integround
+                            
+                            Integration all-arounder, not hard core code wizard
+                            
+                            Generally interested in new technologies
+                        </div>
+                    </div>
+                    <aside data-markdown class="notes">
+                        * What Integround does?
+                        * How I ended up speaking today?
+                        * If I can do this, you can too
+                        * Few words about the agenda
+                    </aside>
+				</section>
+                <section>
+                    <div>
+                        <h3>Why bother with IoT?</h3>
+                        <div data-markdown class="fragment">
+                            6.4B connected things in 2016, _**20.8B**_ by year 2020, [(Gartner)](http://www.gartner.com/newsroom/id/3165317)
+                                                        
+                            Business size 6.2 _**trillion**_ dollars by 2025, [(McKinsey)](http://www.mckinsey.com/industries/high-tech/our-insights/the-internet-of-things-sizing-up-the-opportunity)
+                                                        
+                            Microsoft seems to put rather significant efforts towards IoT tool development                
+                                                        
+                            It's cool
+                        </div>
+                    </div>      
+                    <aside data-markdown class="notes">
+                        * Some estimate that there might be 50B connected devices in 2020
+                        * Basically your undies will be connected to internet in few years
+                        * You can make shitloads of money connecting someone else's undies to the internet
+                        * Possibilities are endles
+                    </aside>
+				</section>
+                <section>
+                   <h3>IoT reference architecture</h3>
+                   <p><img src="AzureBootcamp2016/iot-reference-architecture.png"/></p>
+                   <p><a href="http://download.microsoft.com/download/A/4/D/A4DAD253-BC21-41D3-B9D9-87D2AE6F0719/Microsoft_Azure_IoT_Reference_Architecture.pdf">Microsoft Azure IoT Reference Architecture</a>
+				</section>                
+                <section>
+                   <h3>Azure IoT offerings</h3>
+                   <p><img src="AzureBootcamp2016/azure-platform-services.png"/></p>
+				</section>
+                <section>
+                   <h3>IoT Suite vs Azure Services for IoT</h3>
+                   <p><a href="https://www.microsoft.com/en-us/server-cloud/internet-of-things/azure-iot-suite.aspx">Azure IoT Suite</a> is a collection of pre-configured solutions (preventive maintenance, remote monitoring)</p>
+                   <br/>
+                   <p>Azure Services for IoT is a collection of tools that can be used to build IoT solutions (IoT Hub, Steam Analytics, Storage, App Service...)</p>                   
+				</section>
+                <section>
+                   <h3>IoT Hub vs Event Hubs</h3>
+					<table>
+						<thead>
+							<tr>
+								<th>IoT Hub</th>
+								<th>Event Hubs</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>Two-Way communication</td>
+								<td>Device-to-Cloud communication</td>
+							</tr>
+							<tr>
+								<td>Per-device identity</td>
+								<td>Shared access policies</td>
+							</tr>
+							<tr>
+								<td>Optimized for millions of simultaneous devices</td>
+								<td>More limited number of simultaneus connections (still thousands)</td>
+							</tr>
+							<tr>
+								<td>SDKs for multiple platforms and languages</td>
+								<td>Support for .Net and C. Also AMQP and HTTP send interfaces</td>
+							</tr>
+							<tr>
+								<td>Seems to get new IoT solution specific features</td>
+								<td>Component only for event ingress</td>
+							</tr>
+						</tbody>
+					</table>
+				</section>
+                <section>
+                   <h3>New announcements from Build</h3>
+                   <p>IoT Hub management SDK</p>
+                   <p>Gateway SDK</p>
+				</section>
+                <section>
+                   <h3>Introduction to demo</h3>
+                   <p class="fragment">Collect data from sensors (do the hard work)</p>
+                   <p class="fragment">Process data</p>
+                   <p class="fragment">Persist data</p>
+                   <p class="fragment">Present data (impress your boss)</p>
+				</section>
+                <section data-markdown>
+                   ## Sensors
+                   [Texas Instruments CC2650](http://www.ti.com/product/CC2650)
+                   
+                   BLE chip with multiple services for different measurements
+                   
+                   [Thingsee One](https://www.thingsee.com/)
+                   
+                   Finnish dev platform with multiple radios and sensors
+				</section>
+                <section>
+                   <h3>Demo architecture</h3>
+                   <p><img src="AzureBootcamp2016/demo-architecture.png"/></p>
+				</section>
+                <section>
+                   <h3>Demo time...</h3>
+				</section>
+                <section>
+                   <h3>Kudos</h3>
+                   <p>Sandeep Mistry (<a href="https://github.com/sandeepmistry">https://github.com/sandeepmistry</a>)
+                   <p>Uffe Björklund / @ulfbjo <a href="https://github.com/codeplanner">https://github.com/codeplanner</a>)
+				</section>
+                <section>
+                   <h3>Thanks!</h3>
+				</section>
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
